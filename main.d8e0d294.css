@@ -6031,4 +6031,14 @@ label {
     object-fit: cover;
     border-radius: 5px;
 }
+.my-element {
+    -webkit-appearance: none;
+    /* Chrome, Safari, and newer versions of Opera */
+    -moz-appearance: none;
+    /* Firefox */
+    -ms-appearance: none;
+    /* Internet Explorer */
+    appearance: none;
+    /* Standard syntax */
+}
 /*# sourceMappingURL=main.bc58148c.map*/
