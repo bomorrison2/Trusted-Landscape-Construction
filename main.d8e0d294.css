@@ -162,6 +162,15 @@ input[type=submit] {
     cursor: pointer
 }
 
+.your-selector {
+    -webkit-appearance: button;
+    /* For WebKit browsers */
+    -moz-appearance: button;
+    /* For Mozilla browsers */
+    appearance: button;
+    /* Standard syntax */
+}
+
 button[disabled],
 html input[disabled] {
     cursor: default
@@ -5406,9 +5415,6 @@ button.close {
     position: fixed
 }
 
-@-ms-viewport {
-    width: device-width
-}
 
 .visible-lg,
 .visible-lg-block,
