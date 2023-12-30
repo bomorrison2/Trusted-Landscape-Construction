@@ -1,4 +1,6 @@
+
 /* Reset and Base Styles */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 * {
     margin: 0;
     padding: 0;
@@ -57,6 +59,7 @@ body {
 .site-header h1 {
     margin-bottom: 20px;
     text-align: center;
+    font-family: Oswald, Helvetica, Arial, sans-serif;;
 }
 
 /* Container for Sections */
@@ -336,5 +339,8 @@ section h2 {
 #successMessage {
     color: green;
     font-weight: bold;
+}
+h1 {
+    font-family: Oswald, Helvetica, Arial, sans-serif;
 }
 /* ... [Other styles and media queries remain the same] ... */
