@@ -343,4 +343,28 @@ section h2 {
 h1 {
     font-family: Oswald, Helvetica, Arial, sans-serif;
 }
+
+.fencing-page .gallery-grid {
+    /* Masonry layout styles */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 0;
+}
+
+.fencing-page .gallery-item {
+    width: 100%;
+    overflow: hidden;
+}
+
+.fencing-page .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.fencing-page .gallery-item img:hover {
+    transform: scale(1.1);
+}
 /* ... [Other styles and media queries remain the same] ... */
