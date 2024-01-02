@@ -18,3 +18,17 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         console.error('Error:', error);
     });
 });
+function openLightbox(imgSrc) {
+    document.getElementById('lightbox').style.display = "block";
+    document.getElementById('lightbox-img').src = imgSrc;
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = "none";
+}
+
+// Add event listeners to gallery images
+document.querySelectorAll('.fencing-page .gallery-item img').forEach(img => {
+    img.onclick = () => openLightbox(img.src);
+});
+
