@@ -62,5 +62,9 @@
   {
     "slug": "turfing-2",
     "label": "Turfing"
+  },
+  {
+    "slug": "gates",
+    "label": "Gates"
   }
 ]
