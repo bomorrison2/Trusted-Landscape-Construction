@@ -41,6 +41,19 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    // Homepage tiles: show the newest uploaded photo for a category, if any
+    var covers = document.querySelectorAll('img[data-cover]');
+    if (covers.length) {
+      fetch('./assets/gallery/gallery.json?v=' + Date.now())
+        .then(function (r) { return r.ok ? r.json() : {}; })
+        .then(function (data) {
+          covers.forEach(function (img) {
+            var list = (data && data[img.getAttribute('data-cover')]) || [];
+            if (list.length) img.src = list[0].src;
+          });
+        })
+        .catch(function () {});
+    }
     var grid = document.querySelector('.gallery-grid[data-category]');
     if (!grid) return;
     // Fix Windows-style backslash paths on older hard-coded images
