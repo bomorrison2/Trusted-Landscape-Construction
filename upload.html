@@ -36,6 +36,13 @@
   .manage img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
   .manage button { position: absolute; top: 4px; right: 4px; background: rgba(198,40,40,.9); color: #fff; border: 0; border-radius: 50%; width: 30px; height: 30px; font-size: 18px; line-height: 30px; padding: 0; }
   .hidden { display: none; }
+  .cat-row { display: flex; align-items: center; gap: 6px; padding: 8px 0; border-bottom: 1px solid #eee; }
+  .cat-row span { flex: 1; font-size: 16px; }
+  .cat-row button { border: 1px solid #ccc; background: #fafafa; border-radius: 8px; font-size: 15px; padding: 7px 10px; }
+  .cat-row button.del { color: #c62828; }
+  .add-row { display: flex; gap: 8px; margin-top: 12px; }
+  .add-row input { flex: 1; }
+  .add-row button { border: 0; background: #2e7d32; color: #fff; border-radius: 8px; font-size: 16px; font-weight: 600; padding: 0 16px; }
 </style>
 </head>
 <body>
@@ -92,6 +99,16 @@
       <div id="manage" class="manage"></div>
       <div id="manageMsg" class="msg"></div>
     </div>
+    <div class="card">
+      <h2>Manage galleries</h2>
+      <p class="small">Rename, reorder, add or remove galleries. Changes show on the website in about a minute. Removing a gallery hides it from the site but keeps its photos.</p>
+      <div id="catList"></div>
+      <div class="add-row">
+        <input id="newCat" type="text" placeholder="New gallery name">
+        <button id="addCatBtn">Add</button>
+      </div>
+      <div id="catMsg" class="msg"></div>
+    </div>
   </section>
 
 </main>
@@ -102,18 +119,8 @@
   var BRANCH = 'main';
   var KEY_PATH = 'assets/gallery/upload-key.json';
   var MANIFEST_PATH = 'assets/gallery/gallery.json';
-  var CATEGORIES = [
-    ['fencing', 'Fencing & Gates'],
-    ['slatted-fencing', 'Slatted Fencing'],
-    ['concreting', 'Concreting & Patios'],
-    ['resin-driveways', 'Resin Driveways'],
-    ['landscaping', 'Landscaping'],
-    ['maintenance', 'Maintenance'],
-    ['turfing', 'Turfing & Artificial Grass'],
-    ['bordering', 'Carpentry'],
-    ['kitchen-makeovers', 'Kitchen & Bathroom Makeovers'],
-    ['decking', 'Decking']
-  ];
+  var CATS_PATH = 'assets/gallery/categories.json';
+  var CATEGORIES = []; // loaded from categories.json: [{slug, label, page, cover}]
   var API = 'https://api.github.com/repos/' + OWNER + '/' + REPO + '/contents/';
   var STORE = 'tlc-upload-token';
   var token = null;
@@ -176,9 +183,8 @@
 
   // ---------- startup ----------
   async function start() {
-    CATEGORIES.forEach(function (c) { var o = document.createElement('option'); o.value = c[0]; o.textContent = c[1]; $('category').appendChild(o); });
     token = localStorage.getItem(STORE);
-    if (token) { show('uploadView'); loadManage(); return; }
+    if (token) { show('uploadView'); await loadCategories(); loadManage(); return; }
     try {
       var key = await getFile(KEY_PATH, null);
       show(key ? 'loginView' : 'setupView');
@@ -201,7 +207,7 @@
       await putFile(KEY_PATH, textToB64(JSON.stringify(blob, null, 2)), 'Set up gallery upload password', existing && existing.sha, tok);
       token = tok; localStorage.setItem(STORE, tok);
       $('setupToken').value = $('setupPw').value = $('setupPw2').value = '';
-      show('uploadView'); loadManage();
+      show('uploadView'); await loadCategories(); loadManage();
     } catch (e) { msg('setupMsg', e.message, 'err'); }
     this.disabled = false;
   };
@@ -218,7 +224,7 @@
       localStorage.setItem(STORE, token);
       $('loginPw').value = '';
       msg('loginMsg', '');
-      show('uploadView'); loadManage();
+      show('uploadView'); await loadCategories(); loadManage();
     } catch (e) { msg('loginMsg', "That password didn't work.", 'err'); }
     $('loginBtn').disabled = false;
   }
@@ -313,6 +319,86 @@
       loadManage();
     } catch (e) { msg('manageMsg', e.message, 'err'); }
   }
+
+  // ---------- galleries (categories) ----------
+  async function readCategories() {
+    var f = await getFile(CATS_PATH);
+    if (!f) return { data: [], sha: null };
+    return { data: JSON.parse(b64ToText(f.content)), sha: f.sha };
+  }
+  function fillCategorySelect() {
+    var sel = $('category'), keep = sel.value;
+    sel.innerHTML = '';
+    CATEGORIES.forEach(function (c) { var o = document.createElement('option'); o.value = c.slug; o.textContent = c.label; sel.appendChild(o); });
+    if (keep && CATEGORIES.some(function (c) { return c.slug === keep; })) sel.value = keep;
+  }
+  function renderCategoryList() {
+    var box = $('catList'); box.innerHTML = '';
+    CATEGORIES.forEach(function (c, i) {
+      var row = document.createElement('div'); row.className = 'cat-row';
+      var name = document.createElement('span'); name.textContent = c.label;
+      function btn(text, cls, fn, disabled) { var b = document.createElement('button'); b.textContent = text; if (cls) b.className = cls; b.disabled = !!disabled; b.onclick = fn; return b; }
+      row.appendChild(name);
+      row.appendChild(btn('\u2191', '', function () { moveCategory(i, -1); }, i === 0));
+      row.appendChild(btn('\u2193', '', function () { moveCategory(i, 1); }, i === CATEGORIES.length - 1));
+      row.appendChild(btn('Rename', '', function () { renameCategory(c.slug); }));
+      row.appendChild(btn('Remove', 'del', function () { removeCategory(c.slug); }));
+      box.appendChild(row);
+    });
+  }
+  async function loadCategories() {
+    try { CATEGORIES = (await readCategories()).data; } catch (e) { msg('catMsg', e.message, 'err'); }
+    fillCategorySelect(); renderCategoryList();
+  }
+  // Read the latest list, apply a change, save it (retries if someone else saved at the same time)
+  async function saveCategories(change, commitMsg) {
+    msg('catMsg', 'Saving…');
+    for (var attempt = 0; attempt < 3; attempt++) {
+      try {
+        var cur = await readCategories();
+        var next = change(cur.data);
+        if (!next) { msg('catMsg', ''); return; }
+        await putFile(CATS_PATH, textToB64(JSON.stringify(next, null, 2)), commitMsg, cur.sha);
+        CATEGORIES = next; fillCategorySelect(); renderCategoryList(); loadManage();
+        msg('catMsg', 'Saved. The website updates in about a minute.', 'ok');
+        return;
+      } catch (e) { if (attempt === 2) msg('catMsg', e.message, 'err'); }
+    }
+  }
+  function slugify(s) { return s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'gallery'; }
+  $('addCatBtn').onclick = function () {
+    var label = $('newCat').value.trim();
+    if (!label) return;
+    saveCategories(function (list) {
+      if (list.some(function (c) { return c.label.toLowerCase() === label.toLowerCase(); })) { alert('There is already a gallery called ' + label + '.'); return null; }
+      var base = slugify(label), slug = base, n = 2;
+      while (list.some(function (c) { return c.slug === slug; })) slug = base + '-' + n++;
+      $('newCat').value = '';
+      return list.concat([{ slug: slug, label: label }]);
+    }, 'Add gallery: ' + label);
+  };
+  function renameCategory(slug) {
+    var c = CATEGORIES.filter(function (x) { return x.slug === slug; })[0];
+    var label = prompt('New name for this gallery', c ? c.label : '');
+    if (!label || !label.trim()) return;
+    label = label.trim();
+    saveCategories(function (list) { return list.map(function (x) { return x.slug === slug ? Object.assign({}, x, { label: label }) : x; }); }, 'Rename gallery to ' + label);
+  }
+  function removeCategory(slug) {
+    var c = CATEGORIES.filter(function (x) { return x.slug === slug; })[0];
+    if (!confirm('Remove the "' + (c ? c.label : slug) + '" gallery from the website? Its photos are kept, and adding a gallery with the same name brings them back.')) return;
+    saveCategories(function (list) { return list.filter(function (x) { return x.slug !== slug; }); }, 'Remove gallery ' + (c ? c.label : slug));
+  }
+  function moveCategory(i, dir) {
+    var slug = CATEGORIES[i].slug;
+    saveCategories(function (list) {
+      var idx = list.findIndex(function (x) { return x.slug === slug; }), j = idx + dir;
+      if (idx < 0 || j < 0 || j >= list.length) return null;
+      var copy = list.slice(), t = copy[idx]; copy[idx] = copy[j]; copy[j] = t;
+      return copy;
+    }, 'Reorder galleries');
+  }
+  $('newCat').addEventListener('keydown', function (e) { if (e.key === 'Enter') $('addCatBtn').click(); });
 
   start();
 })();
