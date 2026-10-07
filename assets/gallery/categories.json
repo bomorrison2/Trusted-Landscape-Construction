@@ -58,5 +58,9 @@
     "label": "Decking",
     "page": "decking.html",
     "cover": "assets/images/decking.jpg"
+  },
+  {
+    "slug": "turfing-2",
+    "label": "Turfing"
   }
 ]
