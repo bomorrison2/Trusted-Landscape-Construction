@@ -70,5 +70,9 @@
   {
     "slug": "picket-fencing",
     "label": "Concreting"
+  },
+  {
+    "slug": "metal",
+    "label": "Metal"
   }
 ]
