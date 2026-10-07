@@ -1,0 +1,12 @@
+[
+  {"slug": "fencing", "label": "Fencing & Gates", "page": "fencing.html", "cover": "assets/images/fence.jpg"},
+  {"slug": "slatted-fencing", "label": "Slatted Fencing", "page": "slatted-fencing.html", "cover": "assets/images/fence.jpg"},
+  {"slug": "concreting", "label": "Concreting & Patios", "page": "concreting.html", "cover": "assets/images/concrete.jpg"},
+  {"slug": "resin-driveways", "label": "Resin Driveways", "page": "resin-driveways.html", "cover": "assets/images/concrete.jpg"},
+  {"slug": "landscaping", "label": "Landscaping", "page": "landscaping.html", "cover": "assets/images/landscaping.jpg"},
+  {"slug": "maintenance", "label": "Maintenance", "page": "maintenance.html", "cover": "assets/images/repairs.jpg"},
+  {"slug": "turfing", "label": "Turfing & Artificial Grass", "page": "turfing.html", "cover": "assets/images/turfing.jpg"},
+  {"slug": "bordering", "label": "Carpentry", "page": "bordering.html", "cover": "assets/images/bordering.jpg"},
+  {"slug": "kitchen-makeovers", "label": "Kitchen & Bathroom Makeovers", "page": "kitchen-makeovers.html", "cover": "assets/images/kitchens.jpg"},
+  {"slug": "decking", "label": "Decking", "page": "decking.html", "cover": "assets/images/decking.jpg"}
+]
