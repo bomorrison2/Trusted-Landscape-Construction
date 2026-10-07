@@ -66,5 +66,9 @@
   {
     "slug": "gates",
     "label": "Gates"
+  },
+  {
+    "slug": "picket-fencing",
+    "label": "Picket fencing"
   }
 ]
