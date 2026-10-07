@@ -13,18 +13,18 @@
 <body class="fencing-page">
     <nav class="main-nav">
         <ul class="nav-list">
-            <li><a href="/">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
         </ul>
     </nav>
 <div id="lightbox" class="lightbox">
     <span class="close" onclick="closeLightbox()">&times;</span>
-    <img class="lightbox-content" id="lightbox-img"alt="Lightbox">>
+    <img class="lightbox-content" id="lightbox-img"alt="Lightbox">
 </div>
 
     <main class="content-wrapper">
         <section class="fencing-gallery section-card">
             <h2>Fencing & Gates Gallery</h2>
-            <div class="gallery-grid">
+            <div class="gallery-grid" data-category="fencing">
                 <div class="gallery-item">
                     <img src="assets/images/picket-fencing/fence1.jpeg" alt="Fencing 1" title="Fencing 1">
                 </div>
@@ -65,6 +65,7 @@
     <footer class="footer-container">
         <!-- Footer content -->
     </footer>
+    <script src="./gallery-loader.js"></script>
 </body>
-<script> src="./javascript.js"></script>
+
 </html>
