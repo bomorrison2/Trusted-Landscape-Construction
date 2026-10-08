@@ -171,11 +171,6 @@
       "added": "original website"
     },
     {
-      "src": "assets/images/picket-fencing/fence4.jpeg",
-      "caption": "",
-      "added": "original website"
-    },
-    {
       "src": "assets/images/picket-fencing/fence5.jpeg",
       "caption": "",
       "added": "original website"
@@ -207,6 +202,11 @@
     }
   ],
   "concreting": [
+    {
+      "src": "assets/images/picket-fencing/fence4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
     {
       "src": "assets/gallery/concreting/2026-10-08T20-50-19-411Z-5rqhi.jpg",
       "caption": "",
