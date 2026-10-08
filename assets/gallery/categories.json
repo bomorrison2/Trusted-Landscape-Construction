@@ -24,12 +24,6 @@
     "cover": "assets/images/concrete.jpg"
   },
   {
-    "slug": "landscaping",
-    "label": "Landscaping",
-    "page": "landscaping.html",
-    "cover": "assets/images/landscaping.jpg"
-  },
-  {
     "slug": "maintenance",
     "label": "Patios",
     "page": "maintenance.html",
