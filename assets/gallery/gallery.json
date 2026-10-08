@@ -166,11 +166,6 @@
       "added": "original website"
     },
     {
-      "src": "assets/images/gates/1/gates-5.jpg",
-      "caption": "",
-      "added": "original website"
-    },
-    {
       "src": "assets/images/gates/1/gates-6.jpg",
       "caption": "",
       "added": "original website"
@@ -2017,6 +2012,11 @@
     }
   ],
   "gates": [
+    {
+      "src": "assets/images/gates/1/gates-5.jpg",
+      "caption": "",
+      "added": "original website"
+    },
     {
       "src": "assets/images/gates/1/gates-4.jpg",
       "caption": "",
