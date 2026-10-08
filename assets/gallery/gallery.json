@@ -1,5 +1,161 @@
 {
-  "fencing": [],
+  "fencing": [
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-16-730Z-2azit.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:18.745Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-14-150Z-ocv1m.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:16.594Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-11-085Z-le8w2.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:14.030Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-08-825Z-wdskg.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:10.964Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-06-162Z-eskhe.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:08.712Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-03-905Z-t94ij.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:06.048Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-46-01-373Z-87mth.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:03.797Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-59-404Z-za03i.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:46:01.265Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-56-840Z-h1nuc.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:59.290Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-53-969Z-qdx06.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:56.729Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-51-514Z-366e1.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:53.857Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-48-579Z-osqfz.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:51.397Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-46-515Z-914s7.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:48.436Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-44-364Z-4c1ay.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:46.380Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-42-419Z-9gdbe.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:44.238Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-40-169Z-8pee2.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:42.290Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-38-153Z-nqw12.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:40.039Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-35-757Z-sk57c.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:38.091Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-33-199Z-jbw2m.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:35.635Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-30-642Z-kj09a.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:33.076Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-27-857Z-dwuhm.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:30.516Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-25-722Z-nh4z1.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:27.751Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-23-669Z-ppdy7.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:25.602Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-21-519Z-mj9u8.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:23.556Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-19-453Z-w9e4m.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:21.402Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-17-103Z-bvsm3.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:19.354Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-14-541Z-lxms9.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:16.999Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-12-703Z-8yv5w.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:14.438Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-10-437Z-dw632.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:12.593Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-08-391Z-0im2t.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:10.341Z"
+    },
+    {
+      "src": "assets/gallery/fencing/2026-10-08T20-45-06-164Z-8eos6.jpg",
+      "caption": "",
+      "added": "2026-10-08T20:45:08.295Z"
+    }
+  ],
   "concreting": [],
   "landscaping": [],
   "maintenance": [],
