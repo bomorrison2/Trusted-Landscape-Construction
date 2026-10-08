@@ -164,11 +164,6 @@
       "src": "assets/images/picket-fencing/fence2.jpeg",
       "caption": "",
       "added": "original website"
-    },
-    {
-      "src": "assets/images/gates/1/gates-6.jpg",
-      "caption": "",
-      "added": "original website"
     }
   ],
   "concreting": [
@@ -2012,6 +2007,11 @@
     }
   ],
   "gates": [
+    {
+      "src": "assets/images/gates/1/gates-6.jpg",
+      "caption": "",
+      "added": "original website"
+    },
     {
       "src": "assets/images/gates/1/gates-5.jpg",
       "caption": "",
