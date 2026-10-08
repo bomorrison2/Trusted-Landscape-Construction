@@ -154,6 +154,61 @@
       "src": "assets/gallery/fencing/2026-10-08T20-45-06-164Z-8eos6.jpg",
       "caption": "",
       "added": "2026-10-08T20:45:08.295Z"
+    },
+    {
+      "src": "assets/images/picket-fencing/fence1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/picket-fencing/fence2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/picket-fencing/fence3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/picket-fencing/fence4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/picket-fencing/fence5.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/gates/1/gates-1.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/gates/1/gates-2.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/gates/1/gates-3.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/gates/1/gates-4.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/gates/1/gates-5.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/gates/1/gates-6.jpg",
+      "caption": "",
+      "added": "original website"
     }
   ],
   "concreting": [
@@ -201,9 +256,215 @@
       "src": "assets/gallery/concreting/2026-10-08T20-50-01-599Z-ynt2t.jpg",
       "caption": "",
       "added": "2026-10-08T20:50:03.720Z"
+    },
+    {
+      "src": "assets/images/concrete/concrete1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/concrete/concrete2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/concrete/concrete3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/concrete/concrete4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/concrete/concrete5.jpeg",
+      "caption": "",
+      "added": "original website"
     }
   ],
-  "landscaping": [],
+  "landscaping": [
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.23%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.23.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.24%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.24.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.25%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.25.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.26%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.26.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.27%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.27.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.28%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.28.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.29%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/pergolas/WhatsApp%20Image%202023-03-19%20at%2017.08.30.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.39.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.41.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%282%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%283%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%284%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%285%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%286%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42%20%287%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.42.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43%20%283%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43%20%284%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43%20%285%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43%20%286%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43%20%287%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43%20%288%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.43.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.44%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.44.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.45.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/patios/WhatsApp%20Image%202023-03-19%20at%2017.07.45B.jpeg",
+      "caption": "",
+      "added": "original website"
+    }
+  ],
   "maintenance": [
     {
       "src": "assets/gallery/maintenance/2026-10-08T20-58-40-963Z-frx88.jpg",
@@ -516,6 +777,166 @@
       "src": "assets/gallery/turfing/2026-10-08T20-59-45-633Z-ke04d.jpg",
       "caption": "",
       "added": "2026-10-08T20:59:47.910Z"
+    },
+    {
+      "src": "assets/images/turfing/WhatsApp%20Image%202023-03-19%20at%2017.13.50%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/WhatsApp%20Image%202023-03-19%20at%2017.13.54.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/WhatsApp%20Image%202023-03-19%20at%2017.15.52.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/WhatsApp%20Image%202023-03-19%20at%2017.15.53.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/corner-grass1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/corner-grass2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/corner-grass3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/corner-grass4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/corner-grass5.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/corner-grass6.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/garden1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/garden2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/garden3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/garden4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/hawkswood.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/hawkswood2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/hawkswood3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/hedge1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/hedge3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/wide1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/wide2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/wide3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/turfing/wide4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.13%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.13.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.14%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.14.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.15%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.15.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.16%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.16.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/artificial-grass/WhatsApp%20Image%202023-03-19%20at%2017.00.17.jpeg",
+      "caption": "",
+      "added": "original website"
     }
   ],
   "bordering": [
@@ -583,6 +1004,71 @@
       "src": "assets/gallery/bordering/2026-10-08T21-01-03-724Z-6hlm6.jpg",
       "caption": "",
       "added": "2026-10-08T21:01:05.845Z"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0010.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0011.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0014.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0015.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0016.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0017.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0018.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0019.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0020.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0021.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0023.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/IMG-20230320-WA0024.jpg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/carpentry/WhatsApp%20Image%202023-03-19%20at%2016.50.54.jpg",
+      "caption": "",
+      "added": "original website"
     }
   ],
   "kitchen-makeovers": [
@@ -720,6 +1206,286 @@
       "src": "assets/gallery/kitchen-makeovers/2026-10-08T21-04-21-802Z-kl0mn.jpg",
       "caption": "",
       "added": "2026-10-08T21:04:23.485Z"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.11.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.12%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.12.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.13%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.13.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.14%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.14.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.15%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.15.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.16%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.16.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.17%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.17.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.18%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.18.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/kitchens/WhatsApp%20Image%202023-03-19%20at%2017.06.19.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.38.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.41%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.41%20%282%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.41%20%283%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.41%20%284%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.41%20%285%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.41.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.42%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.42%20%282%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.42.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.43%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.43.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.44%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.44.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.45%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.45.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.46%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.46.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.47%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.47.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.48%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.48.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.49%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.49.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.50%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.50.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.51%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.51.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.52%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.01.52.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.27.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.29%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.29%20%282%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.29%20%283%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.29%20%284%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.30%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.30.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.31%20%281%29.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/bathrooms/WhatsApp%20Image%202023-03-19%20at%2017.02.31.jpeg",
+      "caption": "",
+      "added": "original website"
     }
   ],
   "decking": [
@@ -857,6 +1623,76 @@
       "src": "assets/gallery/decking/2026-10-08T21-07-34-755Z-64gy6.jpg",
       "caption": "",
       "added": "2026-10-08T21:07:36.790Z"
+    },
+    {
+      "src": "assets/images/decking/deck1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck10.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck11.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck12.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck13.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck14.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck2.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck3.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck4.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck5.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck6.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck7.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck8.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
+    {
+      "src": "assets/images/decking/deck9.jpeg",
+      "caption": "",
+      "added": "original website"
     }
   ],
   "slatted-fencing": [
