@@ -166,11 +166,6 @@
       "added": "original website"
     },
     {
-      "src": "assets/images/gates/1/gates-1.jpg",
-      "caption": "",
-      "added": "original website"
-    },
-    {
       "src": "assets/images/gates/1/gates-3.jpg",
       "caption": "",
       "added": "original website"
@@ -2032,6 +2027,11 @@
     }
   ],
   "gates": [
+    {
+      "src": "assets/images/gates/1/gates-1.jpg",
+      "caption": "",
+      "added": "original website"
+    },
     {
       "src": "assets/gallery/gates/2026-10-08T21-13-39-268Z-x4ve9.jpg",
       "caption": "",
