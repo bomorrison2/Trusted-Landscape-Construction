@@ -201,11 +201,6 @@
       "src": "assets/gallery/concreting/2026-10-08T20-50-12-739Z-0hjrf.jpg",
       "caption": "",
       "added": "2026-10-08T20:50:14.986Z"
-    },
-    {
-      "src": "assets/images/concrete/concrete5.jpeg",
-      "caption": "",
-      "added": "original website"
     }
   ],
   "landscaping": [
@@ -2074,6 +2069,11 @@
     }
   ],
   "picket-fencing": [
+    {
+      "src": "assets/images/concrete/concrete5.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
     {
       "src": "assets/gallery/picket-fencing/2026-10-08T21-14-44-079Z-znqlc.jpg",
       "caption": "",
