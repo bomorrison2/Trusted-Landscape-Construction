@@ -156,17 +156,17 @@
       "added": "2026-10-08T20:45:08.295Z"
     },
     {
-      "src": "assets/images/picket-fencing/fence1.jpeg",
-      "caption": "",
-      "added": "original website"
-    },
-    {
       "src": "assets/images/picket-fencing/fence2.jpeg",
       "caption": "",
       "added": "original website"
     }
   ],
   "concreting": [
+    {
+      "src": "assets/images/picket-fencing/fence1.jpeg",
+      "caption": "",
+      "added": "original website"
+    },
     {
       "src": "assets/images/picket-fencing/fence5.jpeg",
       "caption": "",
