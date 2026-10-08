@@ -34,7 +34,13 @@
   .manage { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
   .manage div { position: relative; }
   .manage img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
-  .manage button { position: absolute; top: 4px; right: 4px; background: rgba(198,40,40,.9); color: #fff; border: 0; border-radius: 50%; width: 30px; height: 30px; font-size: 18px; line-height: 30px; padding: 0; }
+  .manage img { cursor: pointer; background: #ddd; }
+  .count { font-weight: 600; margin-top: 4px; }
+  .sheet-bg { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: flex-end; justify-content: center; z-index: 50; }
+  .sheet { background: #fff; width: 100%; max-width: 560px; border-radius: 16px 16px 0 0; padding: 18px 18px calc(18px + env(safe-area-inset-bottom)); max-height: 92vh; overflow-y: auto; }
+  .sheet img { width: 100%; max-height: 40vh; object-fit: contain; border-radius: 8px; background: #eee; }
+  .sheet .btn.danger { background: #c62828; }
+  .sheet .btn.plain { background: #eee; color: #222; }
   .hidden { display: none; }
   .cat-row { display: flex; align-items: center; gap: 6px; padding: 8px 0; border-bottom: 1px solid #eee; }
   .cat-row span { flex: 1; font-size: 16px; }
@@ -94,8 +100,9 @@
       <p class="small">New photos appear on the website about a minute after uploading.</p>
     </div>
     <div class="card">
-      <h2>Photos you've uploaded</h2>
-      <p class="small">Tap &times; to remove a photo from the website.</p>
+      <h2>Photos in this gallery</h2>
+      <p class="small">These are all the photos showing in the gallery chosen at the top, old and new. Tap any photo to move it to a different gallery or remove it from the website.</p>
+      <div id="photoCount" class="count"></div>
       <div id="manage" class="manage"></div>
       <div id="manageMsg" class="msg"></div>
     </div>
@@ -112,6 +119,19 @@
   </section>
 
 </main>
+
+<!-- Photo options (opens when a photo is tapped) -->
+<div id="sheet" class="sheet-bg hidden">
+  <div class="sheet">
+    <img id="sheetImg" alt="Selected photo">
+    <label for="moveTo">Move this photo to</label>
+    <select id="moveTo"></select>
+    <button id="moveBtn" class="btn">Move photo</button>
+    <button id="removeBtn" class="btn danger">Remove from website</button>
+    <button id="cancelBtn" class="btn plain">Cancel</button>
+    <div id="sheetMsg" class="msg"></div>
+  </div>
+</div>
 <script>
 (function () {
   var OWNER = 'bomorrison2';
@@ -288,37 +308,118 @@
     }
   };
 
-  // ---------- manage / delete ----------
+  // ---------- manage: every photo in a gallery (old and new) ----------
+  var HIDDEN = []; // galleries with photos that aren't shown on the site
+  function thumbUrl(src) {
+    // New uploads come straight from GitHub so they show instantly; older photos from the website
+    return src.indexOf('assets/gallery/') === 0
+      ? 'https://raw.githubusercontent.com/' + OWNER + '/' + REPO + '/' + BRANCH + '/' + src
+      : './' + src;
+  }
+  function labelFor(slug) {
+    var c = CATEGORIES.filter(function (x) { return x.slug === slug; })[0];
+    return c ? c.label : slug.replace(/-/g, ' ').replace(/^./, function (s) { return s.toUpperCase(); }) + ' (hidden)';
+  }
+  function addHiddenOptions(sel, manifest) {
+    HIDDEN = Object.keys(manifest).filter(function (k) {
+      return (manifest[k] || []).length && !CATEGORIES.some(function (c) { return c.slug === k; });
+    });
+    var old = sel.querySelector('optgroup'); if (old) old.remove();
+    if (!HIDDEN.length) return;
+    var g = document.createElement('optgroup'); g.label = 'Hidden galleries (not on the website)';
+    HIDDEN.forEach(function (k) { var o = document.createElement('option'); o.value = k; o.textContent = labelFor(k); g.appendChild(o); });
+    sel.appendChild(g);
+  }
   $('category').onchange = loadManage;
   async function loadManage() {
-    var cat = $('category').value, box = $('manage');
-    box.innerHTML = ''; msg('manageMsg', 'Loading…');
+    var box = $('manage');
+    box.innerHTML = ''; $('photoCount').textContent = ''; msg('manageMsg', 'Loading…');
     try {
       var m = await readManifest();
+      var keep = $('category').value;
+      addHiddenOptions($('category'), m.data);
+      if (keep) $('category').value = keep;
+      var cat = $('category').value;
       var list = m.data[cat] || [];
-      msg('manageMsg', list.length ? '' : 'No uploaded photos in this gallery yet.');
+      msg('manageMsg', list.length ? '' : 'No photos in this gallery yet.');
+      $('photoCount').textContent = list.length ? list.length + ' photo' + (list.length > 1 ? 's' : '') + ' in ' + labelFor(cat) : '';
       list.forEach(function (p) {
         var d = document.createElement('div');
         var img = document.createElement('img');
-        img.src = 'https://raw.githubusercontent.com/' + OWNER + '/' + REPO + '/' + BRANCH + '/' + p.src;
-        var x = document.createElement('button'); x.innerHTML = '&times;'; x.setAttribute('aria-label', 'Remove');
-        x.onclick = function () { removePhoto(cat, p.src); };
-        d.appendChild(img); d.appendChild(x); box.appendChild(d);
+        img.loading = 'lazy';
+        img.src = thumbUrl(p.src);
+        img.onclick = function () { openSheet(cat, p.src); };
+        d.appendChild(img); box.appendChild(d);
       });
     } catch (e) { msg('manageMsg', e.message, 'err'); }
   }
-  async function removePhoto(cat, src) {
-    if (!confirm('Remove this photo from the website?')) return;
-    msg('manageMsg', 'Removing…');
-    try {
-      var m = await readManifest();
-      m.data[cat] = (m.data[cat] || []).filter(function (p) { return p.src !== src; });
-      await putFile(MANIFEST_PATH, textToB64(JSON.stringify(m.data, null, 2)), 'Remove gallery photo', m.sha);
-      var f = await getFile(src);
-      if (f) await gh(src, { method: 'DELETE', body: { message: 'Delete gallery photo', sha: f.sha, branch: BRANCH } });
-      loadManage();
-    } catch (e) { msg('manageMsg', e.message, 'err'); }
+
+  // ---------- photo options sheet ----------
+  var sheetCat = null, sheetSrc = null;
+  function openSheet(cat, src) {
+    sheetCat = cat; sheetSrc = src;
+    $('sheetImg').src = thumbUrl(src);
+    var sel = $('moveTo'); sel.innerHTML = '';
+    CATEGORIES.concat(HIDDEN.map(function (k) { return { slug: k }; })).forEach(function (c) {
+      if (c.slug === cat) return;
+      var o = document.createElement('option'); o.value = c.slug; o.textContent = labelFor(c.slug); sel.appendChild(o);
+    });
+    msg('sheetMsg', '');
+    $('moveBtn').disabled = $('removeBtn').disabled = false;
+    $('sheet').classList.remove('hidden');
   }
+  function closeSheet() { $('sheet').classList.add('hidden'); sheetCat = sheetSrc = null; }
+  $('cancelBtn').onclick = closeSheet;
+  $('sheet').onclick = function (e) { if (e.target === this) closeSheet(); };
+
+  // Read the latest list, apply a change, save it (retries if a save clashes)
+  async function saveManifest(change, commitMsg) {
+    for (var attempt = 0; attempt < 3; attempt++) {
+      try {
+        var m = await readManifest();
+        change(m.data);
+        await putFile(MANIFEST_PATH, textToB64(JSON.stringify(m.data, null, 2)), commitMsg, m.sha);
+        return;
+      } catch (e) { if (attempt === 2) throw e; }
+    }
+  }
+
+  $('moveBtn').onclick = async function () {
+    var to = $('moveTo').value, from = sheetCat, src = sheetSrc;
+    if (!to) return;
+    $('moveBtn').disabled = $('removeBtn').disabled = true;
+    msg('sheetMsg', 'Moving…');
+    try {
+      await saveManifest(function (data) {
+        var list = data[from] || [], item = list.filter(function (p) { return p.src === src; })[0];
+        if (!item) return;
+        data[from] = list.filter(function (p) { return p.src !== src; });
+        data[to] = [item].concat((data[to] || []).filter(function (p) { return p.src !== src; }));
+      }, 'Move photo to ' + labelFor(to));
+      closeSheet();
+      msg('manageMsg', 'Moved to ' + labelFor(to) + '. The website updates in about a minute.', 'ok');
+      loadManage();
+    } catch (e) { msg('sheetMsg', e.message, 'err'); $('moveBtn').disabled = $('removeBtn').disabled = false; }
+  };
+
+  $('removeBtn').onclick = async function () {
+    var cat = sheetCat, src = sheetSrc;
+    if (!confirm('Remove this photo from the website? This can\'t be undone.')) return;
+    $('moveBtn').disabled = $('removeBtn').disabled = true;
+    msg('sheetMsg', 'Removing…');
+    try {
+      await saveManifest(function (data) { data[cat] = (data[cat] || []).filter(function (p) { return p.src !== src; }); }, 'Remove gallery photo');
+      // Delete the file too, unless the homepage uses it as a gallery cover
+      var isCover = CATEGORIES.some(function (c) { return c.cover === src; });
+      if (!isCover) {
+        var f = await getFile(src);
+        if (f) await gh(src, { method: 'DELETE', body: { message: 'Delete gallery photo', sha: f.sha, branch: BRANCH } });
+      }
+      closeSheet();
+      msg('manageMsg', 'Removed. The website updates in about a minute.', 'ok');
+      loadManage();
+    } catch (e) { msg('sheetMsg', e.message, 'err'); $('moveBtn').disabled = $('removeBtn').disabled = false; }
+  };
 
   // ---------- galleries (categories) ----------
   async function readCategories() {
