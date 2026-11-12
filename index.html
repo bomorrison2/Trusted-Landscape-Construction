@@ -130,7 +130,12 @@
 
 <section id="contact" class="contact-us section-card">
   <h2>Contact us for a quote</h2>
-  <form id="contactForm" action="YOUR_SERVER_SIDE_ENDPOINT" method="POST">
+  <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required>
+
     <label for="email">Email</label>
     <input type="email" id="email" name="email" placeholder="Your email" required>
 
@@ -144,6 +149,9 @@
   </form>
   <div id="successMessage" style="display:none;">
     <p>✔ Your message has been sent</p>
+  </div>
+  <div id="errorMessage" style="display:none;">
+    <p>Sorry, your message didn't send. Please try again in a moment.</p>
   </div>
 </section>
 
