@@ -1,23 +1,27 @@
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    var formData = new FormData(event.target);
-
-    fetch(event.target.action, {
+// Contact form: submitted to Netlify Forms, which emails each enquiry on
+var contactForm = document.getElementById('contactForm');
+if (contactForm) contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    var btn = contactForm.querySelector('button[type=submit]');
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+    document.getElementById('errorMessage').style.display = 'none';
+    fetch('/', {
         method: 'POST',
-        body: formData,
-        mode: 'no-cors' // This is to prevent CORS errors if you're using services like Formspree
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(contactForm)).toString()
     })
-    .then(response => {
-        // Here you can check the server response
-        document.getElementById('contactForm').style.display = 'none';
+    .then(function (response) {
+        if (!response.ok) throw new Error('Form error ' + response.status);
+        contactForm.style.display = 'none';
         document.getElementById('successMessage').style.display = 'block';
     })
-    .catch(error => {
-        // Handle errors if any
-        console.error('Error:', error);
+    .catch(function (error) {
+        console.error(error);
+        document.getElementById('errorMessage').style.display = 'block';
+        if (btn) { btn.disabled = false; btn.textContent = 'Send Message'; }
     });
 });
+
 function openLightbox(imgSrc) {
     document.getElementById('lightbox').style.display = "block";
     document.getElementById('lightbox-img').src = imgSrc;
